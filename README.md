@@ -19,7 +19,7 @@ Requires Node 22+ (uses global `fetch`).
 | `RABBITMQ_MGMT_USER`     | required                 |
 | `RABBITMQ_MGMT_PASSWORD` | required                 |
 
-The default URL is the management UI as forwarded by `make tunnel` in `importer/`, which must be running. Credentials come from the operator's default-user Secret:
+The default URL is the management UI as forwarded by `make tunnel` at the workspace root, which must be running. Credentials come from the operator's default-user Secret:
 
 ```sh
 export RABBITMQ_MGMT_USER=$(kubectl -n data get secret rabbitmq-default-user -o jsonpath='{.data.username}' | base64 -d)
