@@ -11,7 +11,7 @@ const USER = process.env.RABBITMQ_MGMT_USER;
 const PASSWORD = process.env.RABBITMQ_MGMT_PASSWORD;
 const TIMEOUT_MS = 5000;
 
-const TUNNEL_HINT = "is `make tunnel` running in importer?";
+const TUNNEL_HINT = "is `make tunnel` running at the workspace root?";
 const AUTH_HINT = "check RABBITMQ_MGMT_USER/PASSWORD";
 
 class MgmtError extends Error {}
